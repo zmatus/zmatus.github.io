@@ -1,0 +1,90 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
+---
+
+<BaseLayout title="Resume" sideBarActiveItemID="resume">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Profile</div>
+  </div>
+
+  <div class="mb-10 text-justify">
+    15-year veteran of mission-critical apps and infrastructure, specializing in CI/CD and technical support.
+    Focused on bridging legacy environments with modern automation to drive operational efficiency.
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Work Experience</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Senior Technical Member of Staff"
+      subtitle="June 2024 – April 2026 | Oracle Health | Kansas City, MO"
+    >
+      <ul class="list-disc mx-6 grid gap-2">
+        <li>
+          Implemented Terraform-based OCI infrastructure for regulated environments.
+          <a class="ml-2 link" href="/projects#terraform-oci">More info →</a>
+        </li>
+        <li>
+          Replaced Octopus Deploy with Jenkins pipelines and Ansible for multi-stage .NET releases.
+          <a class="ml-2 link" href="/projects#jenkins-ansible">More info →</a>
+        </li>
+        <li>
+          Extended Cerner CI/CD Maven pipeline with feature-level metadata for traceability.
+          <a class="ml-2 link" href="/projects#cerner-ci-cd">More info →</a>
+        </li>
+        <li>Automated system cleanup to improve CI/CD pipeline reliability.</li>
+        <li>Resolved cross-system CI/CD issues coordinating root cause analysis.</li>
+      </ul>
+    </TimeLineElement>
+
+    <TimeLineElement
+      title="Senior Technical Support Engineer"
+      subtitle="April 2017 – June 2024 | Oracle Health | Kansas City, MO"
+    >
+      <ul class="list-disc mx-6 grid gap-2">
+        <li>Automated support tasks using Jenkins, Git, Python, Bash, and Groovy.</li>
+        <li>Provided end-to-end support for CI/CD tools (Nexus, Artifactory, Jenkins, Electric Cloud).</li>
+        <li>Diagnosed and resolved production incidents across CI/CD pipelines.</li>
+        <li>Led escalations coordinating teams, vendors, and stakeholders.</li>
+        <li>Mentored less experienced engineers.</li>
+      </ul>
+    </TimeLineElement>
+
+    <TimeLineElement
+      title="Senior Technical Solution Analyst"
+      subtitle="June 2015 – April 2017 | Cerner | Kansas City, MO"
+    >
+      <ul class="list-disc mx-6 grid gap-2">
+        <li>Designed and customized Cerner Registration rules using Visual Basic.</li>
+        <li>Diagnosed and resolved worklist query and database relationship issues.</li>
+        <li>Supported and troubleshot HL7 interfaces, collaborating with technical teams.</li>
+        <li>Partnered with clients to analyze and improve registration workflows.</li>
+        <li>Mentored and trained new hires.</li>
+      </ul>
+    </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Skills</div>
+  </div>
+
+  <ul class="list-disc mx-6 mb-10 grid gap-2">
+    <li>DevOps & Infrastructure: OCI, Terraform, Ansible, Linux (RHEL), Windows, IIS</li>
+    <li>DevOps: CI/CD Pipelines, AI-Assisted Development, Containers, Maven</li>
+    <li>Languages & Scripting: Python, Bash, Groovy, Powershell, Java, SQL</li>
+  </ul>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Education</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="B.S. in Computer Information Systems"
+      subtitle="Missouri Western State University | Aug 2005 – May 2009 | St. Joseph, MO"
+    />
+  </div>
+</BaseLayout>

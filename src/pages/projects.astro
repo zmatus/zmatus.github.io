@@ -1,51 +1,54 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import HorizontalCard from "../components/HorizontalCard.astro";
 ---
 
-<BaseLayout title = "Projects" sideBarActiveItemID="projects">
-  <div>
-    <div class="text-3xl w-full font-bold mb-5">Projects Header</div>
+<BaseLayout title="Projects" sideBarActiveItemID="projects">
+  <div class="py-10">
+    <div class="text-4xl font-bold mb-4">Projects</div>
+
+    <div class="space-y-10">
+      <section id="terraform-oci">
+        <div class="text-2xl font-semibold mb-2">Terraform — OCI infrastructure for regulated environments</div>
+        <ul class="list-disc pl-6 space-y-2">
+          <li><strong>Scope:</strong> Contributed to design, modified Terraform modules, and deployed OCI infrastructure across multiple regions (networking, compartments, IAM, compute).</li>
+          <li><strong>Key actions:</strong>
+            <ul class="list-inside">
+              <li>Modified and extended reusable modules for multi-region deployments and environment isolation (workspaces, CI checks).</li>
+              <li>Integrated secrets and key management and automated image/instance provisioning.</li>
+              <li>Added drift detection and automated remediation hooks.</li>
+            </ul>
+          </li>
+          <li><strong>Outcome:</strong> Repeatable, auditable, compliant multi-region provisioning enabling reliable platform deployments.</li>
+        </ul>
+      </section>
+
+      <section id="jenkins-ansible">
+        <div class="text-2xl font-semibold mb-2">Jenkins + Ansible — Replacement of Octopus Deploy for multi-stage .NET releases</div>
+        <ul class="list-disc pl-6 space-y-2">
+          <li><strong>Scope:</strong> Designed and delivered full implementation of the .NET application; implemented Jenkins orchestration and Ansible automation.</li>
+          <li><strong>Key actions:</strong>
+            <ul class="list-inside">
+              <li>Implemented Ansible roles: IIS deployment and F5 lifecycle (remove → drain → restore).</li>
+              <li>Built parameterized Jenkins pipelines with environment targeting, approval gates, inventory-driven host selection, health checks, and rollback paths.</li>
+            </ul>
+          </li>
+          <li><strong>Outcome:</strong> Full operational parity, improved automation and auditability, and elimination of recurring licensing costs.</li>
+        </ul>
+      </section>
+
+      <section id="cerner-ci-cd">
+        <div class="text-2xl font-semibold mb-2">Cerner CI/CD — Artifact → Feature automation and feature-level metadata</div>
+        <ul class="list-disc pl-6 space-y-2">
+          <li><strong>Scope:</strong> Integrated pipeline-level metadata into the Cerner Release Maven Build Pipeline and automated artifact→feature association.</li>
+          <li><strong>Key actions:</strong>
+            <ul class="list-inside">
+              <li>Added pipeline config for projectId + artifact pattern; pipeline computes version/group/artifact at release time.</li>
+              <li>Validated prerequisites, computed payload data, and POSTed to the internal feature-association API using a service account while retaining releasing user context.</li>
+            </ul>
+          </li>
+          <li><strong>Outcome:</strong> Restored traceability, removed manual API steps, and created consistent auditable links between artifacts and feature tracking.</li>
+        </ul>
+      </section>
+    </div>
   </div>
-
-  <HorizontalCard
-    title="Demo Project 1"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="NEW"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 2"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-  />
-
-  <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Projects Header</div>
-  </div>
-
-  <HorizontalCard
-    title="Demo Project 3"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="FOSS"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 4"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 5"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-  />
 </BaseLayout>
